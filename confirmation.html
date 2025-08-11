@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Adoption Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:whitesmoke;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .confirmation-card {
+            background: white;
+            border-radius: 10px;
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+        
+        }
+        h2 {
+            color:brown;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            width: 90%;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        p {
+            font-size: 16px;
+            color:grey;
+        }
+        .highlight {
+            font-weight: bold;
+            color:brown;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color:lightgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color:green;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(165, 221, 165);">
+    <center>
+        <img
+        width="450"
+        height="250"
+        src="https://wallpapers.com/images/featured/cute-animal-pictures-tscmynv1q1lo33f7.jpg"/>
+    <div class="confirmation-card">
+        <h2 style="color:green;"> Adoption Confirmation</h> <br><br>
+        
+            <label style="color:brown;" for="petName">Pet Name:</label><br>
+        <input type="text" id="petName" placeholder="Enter pet Name"><br>   
+        
+        
+        <label style="color: brown;" for="applicantName">Applicant Name:</label><br>
+        <input type="text" id="applicantName" placeholder="Enter your name"><br>
+        
+        <p>Adoption Request Number: <span id="requestNumber" class="highlight"></span></p>
+        <p>Random Pet Fact: <span id="petFact" class="highlight"></span></p>
+        <button style="background-color: green;" onclick="finalize()">Confirm</button>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const pet = urlParams.get("pet");
+        document.getElementById("petName").value = pet;
+        document.getElementById("requestNumber").textContent = "REQ" + Math.floor(1000 + Math.random() * 9000);
+        const facts = [
+            "Dogs can learn over 100 words!",
+            "Cats have 32 muscles in each ear.",
+            "Rabbits can see nearly 360 degrees.",
+            "Cats sleep for 70% of their lives.",
+            "Rabbits’ teeth never stop growing."
+        ];
+        document.getElementById("petFact").textContent = facts[Math.floor(Math.random() * facts.length)];
+        function finalize() {
+            const applicant = document.getElementById("applicantName").value;
+            if (applicant.trim() === "") {
+                alert("Please enter your name!");
+                return;
+            }
+            alert("Adoption confirmed for " + document.getElementById("petName").value + " by " + applicant + "!");
+        }
+    </script>
+    </center>
+</body>
+</html>
