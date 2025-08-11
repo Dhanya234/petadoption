@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adoption Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color:white smoke;
+    text-align: center;
+    padding: 20px;
+  }
+  .form-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: left;
+  }
+  input, textarea, button {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border: white;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  button {
+    background-color:light blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color:light blue;
+  }
+</style>
+<script>
+function submitForm(event) {
+  event.preventDefault();
+  alert("Adoption request submitted! We will contact you soon.");
+}
+</script>
+</head>
+<body style="background-color: rgb(201, 165, 165);">
+  <center>
+<img
+width="450"
+height="250"
+src="https://thumbs.dreamstime.com/b/cats-dogs-peeking-over-white-edge-web-promotional-banner-pet-shop-vet-clinic-background-cute-pets-325674604.jpg"/>
+<h2>Adoption Request Form</h2>
+
+<div class="form-box">
+  <form onsubmit="submitForm(event)">
+    <label>Your Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Reason for Adoption:</label>
+    <textarea name="reason" rows="4" required></textarea>
+    
+  </form>
+  <a href="confirmation.html">
+    <button  style="background-color: green;" type="submit">Submit Adoption Request</button>
+    </a>
+</div>
+</center>
+</body>
+</html>
