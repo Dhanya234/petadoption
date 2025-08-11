@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:white;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color:black;
+        }
+        .pet-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .pet-card {
+            background: white;
+            border: whitesmoke;
+            border-radius: 10px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+        .pet-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .pet-card h3 {
+            margin: 10px 0 5px;
+        }
+        .pet-card p {
+            margin: 0;
+            color:lightgray;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: none;
+            background-color:lightblue;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color:blue;
+        }
+    </style>
+</head>
+<body style="background-color: lightgoldenrodyellow;">
+    <center>
+    <h1 style="background-color: lightgray;"> Home Page</h1>
+    <div class="pet-list">
+        <div class="pet-card">
+            <img src="https://static.toiimg.com/imagenext/toiblogs/photo/readersblog/wp-content/uploads/2021/12/adorable-cavalier-king-charles-spaniel-puppy-royalty-dog.jpg" alt="Dog">
+            <h3>Bella</h3>
+            <p>Type: Dog</p>
+            <a href="dogdetail.html">
+            <button style="background-color: blue;">View Details</button>
+            </a>
+        </div>
+        <div class="pet-card">
+            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHx8MA%3D%3D" alt="Cat">
+            <h3>Milo</h3>
+            <p>Type: Cat</p>
+            <a href="catdetail.html">
+            <button style="background-color: blue;">View Details</button>
+            </a>
+        </div>
+        <div class="pet-card">
+            <img src="https://cdn.britannica.com/20/194520-050-DCAE62F1/New-World-Sylvilagus-cottontail-rabbits.jpg" alt="Rabbit">
+            <h3>Snowy</h3>
+            <p>Type: Rabbit</p>
+            <a href="rabbitdetail.html">
+            <button style="background-color: blue;">View Details</button>
+             </a>
+        </div>
+    </div>
+    </center>
+</body>
+</html>
